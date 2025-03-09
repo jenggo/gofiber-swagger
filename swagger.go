@@ -33,7 +33,7 @@ func New(config ...Config) fiber.Handler {
 	var (
 		prefix string
 		once   sync.Once
-		fs     = static.New("", static.Config{FS: swaggerFiles.FS})
+		fs     = static.New("/", static.Config{FS: swaggerFiles.FS})
 	)
 
 	return func(c fiber.Ctx) error {
